@@ -1,7 +1,11 @@
 ## INSTRUCTION SET
-  #DESC
+DESCRIPTION
+
     The instruction set currently has 7 instructions.
 
-#
+INSTRUCTIONS
 
-
+    1)  STA  |  Stores value in register A                                                      |  0001  |  STA [VALUE]
+    2)  STB  |  Stores value in register B                                                      |  0010  |  STB [VALUE]
+    3)  STC  |  Stores value in register C                                                      |  0011  |  STB [VALUE]
+    4)  ADD  |  Adds the values stored in register A and B and stores the result in register C  |  0100  |  ADD
