@@ -7,3 +7,9 @@ Currently has 7 instructions (see [Instruction set](https://github.com/Coolbob13
 Clock speed is currently +/- 4Hz. 
 
 Output is 5 'lights' representing 5 bits.
+
+## [Assembler](https://github.com/Coolbob134/TerraComp/blob/main/TerracompAssembler.py)
+The assembler converts instructions from a text file into machine code that can be written into program memory.
+
+## Simulator
+(Not implemented yet) Simulates the Terracomp, to simplify debugging of programs written for the computer.
