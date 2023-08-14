@@ -17,6 +17,8 @@
 
 ## USAGE
 
-    The instruction memory is bundled in 8 bit memory 'cells'. Each 8-bit 'cell' is split into two more 4-bit 'cells'. The first four bits represent the instruction in binary. The last four bits contains the value for the instruction.
-    An example:
-        00110001 - The first four bits (0011) represent STC. The last four bits (0001) represent the value to be stored in register C.
+    The instruction memory is bundled in 8 bit memory 'cells'. Each 8-bit 'cell' is split into two more 4-bit 'cells'. 
+    The first four bits represent the instruction. The last four bits contains the value for the instruction.
+    
+    An example: 00110001 - The first four bits (0011) represent STC. 
+                         -The last four bits (0001) represent the value to be stored in register C.
