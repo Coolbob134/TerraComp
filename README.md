@@ -11,5 +11,5 @@ Output is 5 'lights' representing 5 bits.
 ## [Assembler](https://github.com/Coolbob134/TerraComp/blob/main/TerracompAssembler.py)
 The assembler converts instructions from a text file into machine code that can be written into program memory.
 
-## Simulator
-(Not implemented yet) Simulates the Terracomp, to simplify debugging of programs written for the computer.
+## [Simulator](https://github.com/Coolbob134/TerraComp/blob/main/TerracompSimulator.py)
+Simulates the computer, to simplify debugging and development of programs written for the computer.
