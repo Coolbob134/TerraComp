@@ -1,7 +1,10 @@
-#"Assembler" for the Terracomp project
-#GitHub: https://github.com/Coolbob134/TerraComp/ (currently private)
+#Assembler for the Terracomp project
+#GitHub: https://github.com/Coolbob134/TerraComp/ (currently public)
 
-#This compiler will only compile into usable machine code at the moment. The user still needs to write the program into program memory manually.
+#This assembler will only convert into usable machine code at the moment. The user still needs to write the program into program memory manually. 
+#The output file option can be used to excecute the generated code in the simulator.
+
+import os.path
 
 commands = {
     "STA"  : "0001",
@@ -26,35 +29,41 @@ writetofile = False
 
 print("TERRACOMP ASSEMBLER\n")
 filepath = input("Enter file path: ")
+if not os.path.exists(filepath):
+    raise Exception(f"File \"{filepath}\" does not exist")
 if input("Do you want to write the output to a file? Y/N: ") == 'Y':
     writetofile = True
-    OutputFile = open(input("Enter Output file path: "),"w")
+    OutputFilePath = input("Enter Output file path: ")
+    if not os.path.exists(filepath):
+        raise Exception(f"File \"{filepath}\" does not exist")
+    OutputFile = open(OutputFilePath,"w")
     
     
 def assemble(inputline):
-    line1 = inputline.strip()  
-    cmd = line1.split(" ")[0]
+    global linecounter
+    line = inputline.strip()  
+    cmd = line.split(" ")[0]
     if cmd not in commands:
-        raise ValueError(f"{cmd} is not a valid command (line {linecounter})")    
-    if len(line1.split(" ")) == command_arguments[cmd]:
-        if len(line1.split(" ")) == 2:
-            arg1 = line1.split(" ")[1]
+        raise SyntaxError(f"{cmd} is not a valid command (line {linecounter})")    
+    if len(line.split(" ")) == command_arguments[cmd]:
+        if len(line.split(" ")) == 2:
+            arg1 = line.split(" ")[1]
         else:
             arg1 = 0
-        line1 = commands[cmd]
+        line = commands[cmd]
         if int(arg1) <= 15:
-            line1 = line1 + " " + f"{int(arg1):04b}"
+            line = line + " " + f"{int(arg1):04b}"
         else:
             raise ValueError(f"Value exceeds maximum at line {linecounter}")
     else:
-        raise ValueError(f"Incorrect number of arguments at line {linecounter}") 
-    return line1
+        raise SyntaxError(f"Incorrect number of arguments at line {linecounter}") 
+    return line
 
 with open(filepath) as SourceFile:
     for line in SourceFile.readlines():
         linecounter = linecounter +1
         print(assemble(line))
         if writetofile == True:
-            OutputFile.write(assemble(line)+"\r")
+            OutputFile.write(assemble(line)+"\n")
 
 print("\nDONE!")
