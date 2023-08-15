@@ -3,7 +3,7 @@
 
 ## Fibonacci sequence
 
-### "Assembly"
+### Assembly
 
      STC 0
      DISP
