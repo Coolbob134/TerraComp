@@ -13,3 +13,13 @@ The assembler converts instructions from a text file into machine code that can 
 
 ## [Simulator](https://github.com/Coolbob134/TerraComp/blob/main/TerracompSim.py)
 Simulates the computer, to simplify debugging and development of programs written for the computer.
+
+
+
+
+
+
+
+
+##PLEASE NOTE
+As of late 2023 I am busy with my matric exams. Expect a slow down in development.
