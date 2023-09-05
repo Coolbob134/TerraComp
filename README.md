@@ -14,7 +14,7 @@ The assembler converts instructions from a text file into machine code that can 
 ## [Simulator](https://github.com/Coolbob134/TerraComp/blob/main/TerracompSim.py)
 Simulates the computer, to simplify debugging and development of programs written for the computer.
 
-## [Experimental Simulator](https://github.com/Coolbob134/TerraComp/blob/main/TerracompSimExperimental.py))
+## [Experimental Simulator](https://github.com/Coolbob134/TerraComp/blob/main/TerracompSimExperimental.py)
 Experimental version of the simulator, closer to an actual compiler. It has Jump, Return and is 8 bit.
 
 
