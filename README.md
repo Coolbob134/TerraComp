@@ -19,7 +19,6 @@ Experimental version of the simulator, closer to an actual compiler. It has Jump
 
 
 
-
-
-##PLEASE NOTE
+  
+## PLEASE NOTE
 As of late 2023 I am busy with my matric exams. Expect a slow down in development.
