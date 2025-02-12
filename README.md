@@ -18,7 +18,3 @@ Simulates the computer, to simplify debugging and development of programs writte
 Experimental version of the simulator, closer to an actual compiler. It has Jump, Return and is 8 bit.
 
 
-
-  
-## PLEASE NOTE
-As of late 2023 I am busy with my matric exams. Expect a slowdown in development.
